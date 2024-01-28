@@ -3351,7 +3351,7 @@ input, select, textarea {
 			}
 
 				#banner h1 {
-					padding: 0.4em 0 0 0;
+					padding: 0.9em 0 0 0;
 					text-align: center;
 					font-size: 40pt;
 				}
@@ -3361,7 +3361,7 @@ input, select, textarea {
 				}
 
 				#banner p {
-					padding: 13.5em 0 0 1%;
+					padding: 11.5em 0 0 1%;
 				}
 
 		/* Wrapper */
@@ -3422,6 +3422,10 @@ input, select, textarea {
 
 				#banner header {
 					padding: 20px;
+				}
+				
+				#banner p {
+					padding: 14em 0 0 1%;
 				}
 
 		/* Wrapper */
