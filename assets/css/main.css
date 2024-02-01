@@ -2397,6 +2397,125 @@ input, select, textarea {
 			}
 
 /* Button */
+	#dark {
+		float: right;
+		padding: 1em 1em 0 0;
+	}
+
+	.switch {
+		position: relative;
+		display: inline-block;
+		width: 60px;
+		height: 34px;
+	}
+
+	.switch input { 
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #ccc;
+		background-image: url("images/sun.png"), url("images/moon.png");
+		background-size: auto 60%, auto 60%;
+		background-repeat: no-repeat, no-repeat;
+		background-position: 15% center, 85% center;
+		opacity: 0.8;
+		-webkit-transition: .4s;
+		transition: .4s;
+	}
+	  
+	.slider:before {
+		position: absolute;
+		content: "";
+		height: 26px;
+		width: 26px;
+		left: 4px;
+		bottom: 4px;
+		background-color: white;
+		-webkit-transition: .4s;
+		transition: .4s;
+	}
+	  
+	input:checked + .slider {
+		background-color: #555;
+	}
+	  
+	input:focus + .slider {
+		box-shadow: 0 0 1px #2196F3;
+	}
+	  
+	input:checked + .slider:before {
+		-webkit-transform: translateX(26px);
+		-ms-transform: translateX(26px);
+		transform: translateX(26px);
+	}
+	  
+	/* Rounded sliders */
+	.slider.round {
+		border-radius: 34px;
+	}
+	  
+	.slider.round:before {
+		border-radius: 50%;
+	}
+	
+	/* input[type="dark"],
+	button,
+	.button {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+		background-image: url("images/moon.png");
+		background-size: auto 80%;
+		background-repeat: no-repeat;
+		background-color: #ddd;
+		background-position: 20% center;
+		border-radius: 8px;
+		opacity: 0.5;
+		border: 0;
+		outline: none;
+		color: #555;
+		cursor: pointer;
+		display: inline-block;
+		padding: 0 0;
+		line-height: 1.6em;
+		width: 3em;
+		caret-color: transparent;
+	}
+
+		input[type="dark"]:hover,
+		button:hover,
+		.button:hover {
+			background-color: #555;
+			color: #ddd !important;
+		}
+
+		input[type="dark"]:active,
+		button:active,
+		.button:active {
+			background-color: #333;
+			color: #ddd;
+		}
+
+		input[type="dark"].alt,
+		button.alt,
+		.button.alt {
+			background-color: #555555;
+			color: #fff;
+		} */
 
 	input[type="submit"],
 	input[type="reset"],
@@ -2632,6 +2751,10 @@ input, select, textarea {
 					display: none;
 				}
 
+	#darkmode {
+		padding: 0 0 0 0;
+	}
+
 /* Dropotron */
 
 	.dropotron {
@@ -2715,6 +2838,10 @@ input, select, textarea {
 			font-size: 0.8em;
 		}
 		
+		#banner #clickMe {
+			padding: 2em 0 0 0;
+		}
+
 		#banner header {
 			position: absolute;
 			bottom: 0;
@@ -2757,7 +2884,7 @@ input, select, textarea {
 	}
 
 		.wrapper.style1 {
-			background: #fff;
+			background: #fafafa url("images/bg01.png");
 		}
 
 		.wrapper.style2 {
@@ -2808,6 +2935,7 @@ input, select, textarea {
 
 	#footer {
 		padding: 4em 0 1em 0;
+		background: #f8f8f8 url("images/bg01.png");
 	}
 
 		#footer a {
