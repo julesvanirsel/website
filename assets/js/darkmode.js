@@ -9,7 +9,7 @@ const form3 = document.getElementById("message");
 
 darkmode.onclick = function(){
     swap([bio,footer,highlights],20);
-    swap([form1,form2,form3],85);
+    swap([form1,form2,form3],50);
 }
 
 function swap(els,offset) {

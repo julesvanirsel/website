@@ -2399,7 +2399,7 @@ input, select, textarea {
 /* Button */
 	#dark {
 		float: right;
-		padding: 1em 1em 0 0;
+		padding: 1em 1em 1em 0;
 	}
 
 	.switch {
