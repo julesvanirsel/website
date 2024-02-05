@@ -1,5 +1,4 @@
 const darkmode = document.getElementById("darkmode");
-const dark = document.getElementById("dark");
 const footer = document.getElementById("footer");
 const bio = document.getElementById("bio");
 const highlights = document.getElementById("highlights");
