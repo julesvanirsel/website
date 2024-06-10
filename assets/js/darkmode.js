@@ -5,22 +5,25 @@ const highlights = document.getElementById("highlights");
 const form1 = document.getElementById("name");
 const form2 = document.getElementById("email");
 const form3 = document.getElementById("message");
+const construction = document.getElementById("under-construction");
 
 darkmode.onclick = function(){
-    swap([bio,footer,highlights],20);
+    swap([bio,footer,highlights,construction],20);
     swap([form1,form2,form3],50);
 }
 
 function swap(els,offset) {
     for (let i = 0; i < els.length; i++) {
-        el = els[i];
-        style = window.getComputedStyle(el,null);
-        c1 = style.getPropertyValue('color');
-        c2 = style.getPropertyValue('background-color');
-        c3 = style.getPropertyValue('border-color');
-        el.style.color = invert(c1,offset);
-        el.style.backgroundColor = invert(c2,offset);
-        el.style.borderColor = invert(c3,offset);
+        el = els[i];            
+        if (el instanceof HTMLElement) {
+            style = window.getComputedStyle(el,null);
+            c1 = style.getPropertyValue('color');
+            c2 = style.getPropertyValue('background-color');
+            c3 = style.getPropertyValue('border-color');
+            el.style.color = invert(c1,offset);
+            el.style.backgroundColor = invert(c2,offset);
+            el.style.borderColor = invert(c3,offset);
+        }
     }
 }
 

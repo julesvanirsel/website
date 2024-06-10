@@ -73,7 +73,11 @@ input, select, textarea {
 }
 
 /* Basic */
-
+	.under-construction {
+		margin-bottom: 12em;
+		margin-top: 12em;
+	}
+	
 	html {
 		box-sizing: border-box;
 	}
@@ -136,7 +140,7 @@ input, select, textarea {
 		color: inherit;
 		font-weight: 600;
 		line-height: 1.75em;
-		margin-bottom: 1em;
+		margin-bottom: 0em;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -156,6 +160,11 @@ input, select, textarea {
 
 	h3 {
 		font-size: 1.2em;
+		letter-spacing: -0.025em;
+	}
+
+	h4 {
+		font-size: 2.5em;
 		letter-spacing: -0.025em;
 	}
 
@@ -2621,39 +2630,45 @@ input, select, textarea {
 
 	#nav {
 		cursor: default;
-		background-color: #121;
+		/* background-color: #121;
 		background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
-		background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
+		background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png"); */
+		background-image: url("../../images/header.jpg");
+		background-position: center center;
+		background-size: cover;
 		padding: 0;
 	}
 
-		#nav:after {
+		/* #nav:after {
 			content: '';
 			display: block;
 			width: 100%;
 			height: 0.75em;
-			background-color: #493;
+			background-color: #fff;
 			background-image: url("images/bg01.png");
-		}
+		} */
 
 		#nav > ul {
 			margin: 0;
+			padding: 0;
 		}
 
 			#nav > ul > li {
 				position: relative;
 				display: inline-block;
 				margin-left: 1em;
+				padding: 0;
 			}
 
 				#nav > ul > li a {
-					color: #c0c0c0;
+					/* color: #c0c0c0; */
+					color: #fff;
 					text-decoration: none;
 					border: 0;
 					display: block;
-					padding: 1.5em 0.5em 1.35em 0.5em;
+					padding: 2.5em 0.5em 2.5em 0.5em;
 				}
 
 				#nav > ul > li:first-child {
@@ -2661,7 +2676,7 @@ input, select, textarea {
 				}
 
 				#nav > ul > li:hover a {
-					color: #fff;
+					color: #fc6;
 				}
 
 				#nav > ul > li.current {
@@ -2669,19 +2684,29 @@ input, select, textarea {
 				}
 
 					#nav > ul > li.current:before {
-						-moz-transform: rotateZ(45deg);
+						/* -moz-transform: rotateZ(45deg);
 						-webkit-transform: rotateZ(45deg);
 						-ms-transform: rotateZ(45deg);
 						transform: rotateZ(45deg);
-						width: 0.75em;
-						height: 0.75em;
+						width: 0.9em;
+						height: 0.9em;
 						content: '';
 						display: block;
 						position: absolute;
 						bottom: -0.5em;
 						left: 50%;
-						margin-left: -0.375em;
-						background-color: #493;
+						margin-left: -0.2em;
+						background-color: var(--before-color,#ccd);
+						background-image: url("images/bg01.png"); */
+						width: 100%;
+						height: 10em;
+						content: '';
+						display: block;
+						position: absolute;
+						bottom: 0em;
+						left: 0em;
+						opacity: 0.1;
+						background-color: #fff;
 						background-image: url("images/bg01.png");
 					}
 
@@ -2690,7 +2715,7 @@ input, select, textarea {
 					}
 
 				#nav > ul > li.active a {
-					color: #fff;
+					color: #fc6;
 				}
 
 				#nav > ul > li.active.current:before {
@@ -2716,6 +2741,7 @@ input, select, textarea {
 		border-radius: 5px;
 		color: #fff;
 		min-width: 10em;
+		position: relative;
 		padding: 0.4em 0;
 		text-align: center;
 		box-shadow: 0 1em 1em 0 rgba(0, 0, 0, 0.5);
@@ -2728,13 +2754,13 @@ input, select, textarea {
 		}
 
 			.dropotron > li > a {
-				color: #c0c0c0;
+				color: #fff;
 				text-decoration: none;
 				border: 0;
 			}
 
 			.dropotron > li.active > a, .dropotron > li:hover > a {
-				color: #fff;
+				color: #fc6;
 			}
 
 		.dropotron.level-0 {
@@ -2847,7 +2873,8 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #493;
+			/* background-color: #493; */
+			background-color: #141;
 			background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
 			background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
