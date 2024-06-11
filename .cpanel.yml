@@ -5,6 +5,4 @@ deployment:
     - /bin/cp -r assets $DEPLOYPATH
     - /bin/cp -r images $DEPLOYPATH
     - /bin/cp -r documents $DEPLOYPATH
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp cv.html $DEPLOYPATH
-    - /bin/cp courses-graduate.html $DEPLOYPATH
+    - /bin/cp -r . $DEPLOYPATH

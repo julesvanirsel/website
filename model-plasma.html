@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title id="logo">Jules van Irsel</title>
+		<title id="logo">Jules van Irsel - Modelling</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -20,12 +20,12 @@
 				<!-- Nav -->
 				<nav id="nav">
 					<ul>
-						<li class="current"><a href="index.html">Home</a></li>
+						<li><a href="index.html">Home</a></li>
 						<li><a href="documents/cv.pdf">CV</a></li>
-						<li>
+						<li class="current">
 							<a href="#">Modelling</a>
 							<ul>
-								<li><a href="model-plasma.html">Ionospheric Plasma</a></li>
+								<li><a href="#">Ionospheric Plasma</a></li>
 								<li><a href="coming-soon.html">CAD Modelling</a></li>
 							</ul>
 						</li>
@@ -82,89 +82,42 @@
 				</label>
 			</section>
 			
-			<!-- Bio -->
+			<!-- GEMINI -->
 			<section id="content" class="wrapper style1">
 				<div class="container">
 					<section class="col-6 col-12-narrower">
 						<div class="box post">
-							<a href="#" class="image left"><img src="images/headshot.jpg" alt="" /></a>
+							<a href="#" class="image left"><img src="images/gemini.png" alt="" /></a>
 							<div class="inner">
-								<h4>Jules van Irsel</h4>
+								<h4>3D Multi-Fluid Plasma Modelling</h4>
 								<p allign="left">
-									Welcome to my online abstract of personal and professional endeavors. My name is
-									Jules van Irsel and this is my digital resume. I am a space plasma physicist,
-									rocket instrument scientist, and former mechanical design engineer. I am currently
-									working on my Ph.D. <a href="documents/thesis_proposal.pdf">dissertation</a> on
-									electric current connectivity in auroral	atmospheres, working extensively with
-									3D fluid simulations.
-									<br><br>									
-									I am adept in mechanical
-									and electrical computer aided design, engineering, manufacturing, and testing. I am also
-									proficient in the core branches of physics, multilingual computational physics, and large data
-									management. Fundamentally, I have endless intellectual	curiosity which enables me to have
-									diverse strengths. I am <em>curious</em>, <em>conscientious</em>, and <em>interdisciplinary</em>.
-									<br><br>
-									Thank you for your interest in my work! <!-- Pers. Comm. B. E. Docko (2024) -->
+									A large part of my research involves simulating the plasma of the auroral atmosphere in three dimensions.
+									I make use of the state-of-the-art model named the Geospace Environment Model of Ion-Neutral Interactions (<a href="https://github.com/gemini3d">GEMINI</a>) developed in large part by Matthew D. Zettergren (ERAU), Josh Semeter (BU), Jonathan B. Snively (ERAU), and Michael Hirsch (BU).
+									This is a multi-fluid (6 ions + electrons), quasi-electrostatic model which, in brief, calculates the conductivity volume of the upper atmosphere by updating the state variables of each constituent fluid in time.
+									With this, it determines the electric currents surrounding auroral atmosphere using the electric field drivers and Ohm's law.
 								</p>
 							</div>
 						</div>
 					</section>
 				</div>
-			</section>
-			
-			<!-- CTA -->
-			<section id="cta" class="wrapper style3">
 				<div class="container">
-					<header>
-						<h2>Think I'm the right fit for your company or organization?</h2>
-						<a href="contact.html" class="button">Let me know!</a>
-					</header>
-				</div>
-			</section>
-
-			<!-- Posts -->
-			<section id="highlights" class="wrapper style1">
-				<div class="container">
-					<div class="row">
-						<section class="col-6 col-12-narrower">
-							<div class="box post">
-								<a href="model-plasma.html" class="image left"><img src="images/gemini.png" alt="" /></a>
-								<div class="inner">
-									<h3>Multi-fluid plasma modelling</h3>
-									<p>Throughout my Ph.D. I've worked extensively with state-of-the-art 3D ionospheric simulations provided by the Geospace Environment Model of Ion-Neutral Interactions (<a href="https://github.com/gemini3d">GEMINI</a>).</p>
-								</div>
+					<section class="col-6 col-12-narrower">
+						<div class="box post">
+							<a href="images/swop_0210_AC_02.png" class="image left"><img src="images/swop_0210_AC_02.png" alt="" /></a>
+							<div class="inner">
+								<h4>Electric Currents in Aurorae</h4>
+								<p allign="left">
+									Aside from the GEMINI <a href="https://github.com/317lab/aurora_gemini">setup and driver tools</a> I've developed, I have also invented a technique for visualizing the rich data output volumes.
+									Understanding "how currents close" intuitively requires a rendering of the complex 3D vector field that is current density.
+									Using the GEMINI enforced condition of divergence-free currents, and utilizing the mathematical properties of streamlines, I generate <em>current flux tubes</em>.
+									These tubes are, in essence, electrical wires carrying a single amperage.
+									They enable us to determine where a patch of magnetospheric current ends up exiting the atmosphere.
+									<br><br>
+									For more information and details on the figures to the left, feel free to read <a href="documents/jgr_vanirsel_etal_2024.pdf">our paper</a>!
+								</p>
 							</div>
-						</section>
-						<section class="col-6 col-12-narrower">
-							<div class="box post">
-								<a href="#" class="image left"><img src="images/arcs_orbit.gif" alt="" /></a>
-								<div class="inner">
-									<h3>NASA MIDEX Proposal </h3>
-									<p>I've provided support on several NASA funding proposals including the 2019 Heliophysics Medium-Class Explorer proposal named the Auroral Reconstruction CubeSwarm (<a href="https://explorers.larc.nasa.gov/HPMIDEX/announcements.html">ARCS</a>).</p>
-								</div>
-							</div>
-						</section>
-					</div>
-					<div class="row">
-						<section class="col-6 col-12-narrower">
-							<div class="box post">
-								<a href="#" class="image left"><img src="images/lamp.jpg" alt="" /></a>
-								<div class="inner">
-									<h3>Sounding rockets</h3>
-									<p>In addition to my dissertation research, I also do field work providing support for sounding rocket instruments. Image credit: Justin Hartney.</p>
-								</div>
-							</div>
-						</section>
-						<section class="col-6 col-12-narrower">
-							<div class="box post">
-								<a href="#" class="image left"><img src="images/mpi.png" alt="" /></a>
-								<div class="inner">
-									<h3>Computer Aided Design</h3>
-									<p>Prior to embarking graduate school, I worked as an instrument design and assembly assistant at the University of Calgary. I took on the redesign of the rocket Mini Plasma Imager.</p>
-								</div>
-							</div>
-						</section>
-					</div>
+						</div>
+					</section>
 				</div>
 			</section>
 			
