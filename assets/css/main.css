@@ -3093,6 +3093,16 @@ input, select, textarea {
 
 	@media screen and (max-width: 850px) {
 
+		/* JVI */
+
+			#dark {
+				position: fixed;
+				right: 5px;
+				top: 5px;
+				padding: 0;
+				z-index: 100000;
+			}
+
 		/* Basic */
 
 			html, body {
@@ -3104,7 +3114,7 @@ input, select, textarea {
 			}
 
 			h1, h2, h3, h4, h5, h6 {
-				margin-bottom: 0.5em;
+				margin-bottom: 0em;
 			}
 
 			header p {
@@ -3245,14 +3255,14 @@ input, select, textarea {
 				top: 0;
 				width: 100%;
 				z-index: 10001;
-				background-color: #121;
+				background-color: #141;
 				background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
 				background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
 				background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
 				background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
 				height: 44px;
 				line-height: 44px;
-				box-shadow: 0 4px 0 0 #493;
+				/* box-shadow: 0 4px 0 0 #f40903; */
 			}
 
 				#titleBar .title {
@@ -3427,6 +3437,12 @@ input, select, textarea {
 				line-height: 1.35em;
 			}
 
+			h4 {
+				font-size: 2em;
+				letter-spacing: 0;
+				line-height: 1.35em;
+			}
+
 			header p {
 				margin-top: -0.5em;
 				font-size: 1em;
@@ -3487,6 +3503,18 @@ input, select, textarea {
 /* Mobile (Portrait) */
 
 	@media screen and (max-width: 480px) {
+
+		/* JVI */
+
+			/* .wrapper.style1 {
+				padding-top: 4em;
+			} */
+
+			h4 {
+				font-size: 1.8em;
+				letter-spacing: 0;
+				line-height: 1.35em;
+			}
 
 		/* Icon */
 
