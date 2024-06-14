@@ -7,7 +7,16 @@ const form2 = document.getElementById("email");
 const form3 = document.getElementById("message");
 const construction = document.getElementById("under-construction");
 
-darkmode.onclick = function(){
+window.onload = function() {
+    loadSwitchState();
+};
+
+darkmode.onclick = function() {
+    darkmodeToggle();
+    saveSwitchState();
+}
+
+function darkmodeToggle(){
     swap([content,footer,highlights,construction],20);
     swap([form1,form2,form3],50);
 }
@@ -37,5 +46,43 @@ function invert(c,offset) {
     } else{
         a = 1 - rgb[3];
         return `rgba(${r}, ${g}, ${b}, ${a})`;
+    }
+}
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+        console.log(date)
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+function saveSwitchState() {
+    var switchElement = document.getElementById('darkmode');
+    var switchState = switchElement.checked ? 'on' : 'off';
+    setCookie('darkmode', switchState, 7); // Save for 7 days
+}
+
+function loadSwitchState() {
+    var switchState = getCookie('darkmode');
+    if (switchState) {
+        if (switchState === 'on') {
+            darkmodeToggle();
+            darkmode.checked = true;
+        }
     }
 }
