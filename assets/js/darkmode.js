@@ -1,4 +1,5 @@
 const darkmode = document.getElementById("darkmode");
+const body = document.body;
 const footer = document.getElementById("footer");
 const content = document.getElementById("content");
 const highlights = document.getElementById("highlights");
@@ -9,6 +10,7 @@ const construction = document.getElementById("under-construction");
 
 window.onload = function() {
     loadSwitchState();
+    swapBackground();
 };
 
 darkmode.onclick = function() {
@@ -19,11 +21,12 @@ darkmode.onclick = function() {
 function darkmodeToggle(){
     swap([content,footer,highlights,construction],20);
     swap([form1,form2,form3],50);
+    swapBackground();
 }
 
 function swap(els,offset) {
     for (let i = 0; i < els.length; i++) {
-        el = els[i];            
+        el = els[i];
         if (el instanceof HTMLElement) {
             style = window.getComputedStyle(el,null);
             c1 = style.getPropertyValue('color');
@@ -33,6 +36,14 @@ function swap(els,offset) {
             el.style.backgroundColor = invert(c2,offset);
             el.style.borderColor = invert(c3,offset);
         }
+    }
+}
+
+function swapBackground() {
+    if (darkmode.checked) {
+        body.style.backgroundColor = 'rgb(21, 26, 26)'
+    } else {
+        body.style.backgroundColor = 'rgb(254, 249, 249)'
     }
 }
 
@@ -55,7 +66,6 @@ function setCookie(name, value, days) {
         var date = new Date();
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
         expires = "; expires=" + date.toUTCString();
-        console.log(date)
     }
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
