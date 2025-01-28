@@ -1,67 +1,127 @@
-/*
-	Arcana by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+var $body = $('body')
+var bp = 0
+const [bp0, bp1] = [700, 1140]
+const nav = document.getElementById('nav')
 
-(function($) {
+checkBreakpoint()
+updateNavClass()
 
-	var	$window = $(window),
-		$body = $('body');
+// title bar
+$(
+    '<div id="title-bar">' +
+    '<button id="nav-open-btn" onclick="openNav()" type="button" title="openNav"></button>' +
+    '<h4>' + $('#title').html() + '</h4>' +
+    '</div>'
+).prependTo($body);
 
-	// Breakpoints.
-		breakpoints({
-			wide:      [ '1281px',  '1680px' ],
-			normal:    [ '981px',   '1280px' ],
-			narrow:    [ '841px',   '980px'  ],
-			narrower:  [ '737px',   '840px'  ],
-			mobile:    [ '481px',   '736px'  ],
-			mobilep:   [ null,      '480px'  ]
-		});
+// open and close nav panel
+function openNav() {
+    nav.style.left = "0";
+}
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+function closeNav() {
+    nav.style.left = "-50em";
+}
 
-	// Dropdowns.
-		$('#nav > ul').dropotron({
-			offsetY: -15,
-			hoverDelay: 0,
-			alignment: 'center'
-		});
+// document.body.addEventListener('click', function () {
+//     if (nav.className === "nav-panel") {
+//         if (window.getComputedStyle(nav, null).getPropertyValue('left') === "0px") {
+//             closeNav()
+//         }
+//     }
+// });
 
-	// Nav.
+// open nav items
+function openNavItem(el) {
+    if (bp < 2) {
+        if (el.style.maxHeight && el.style.maxHeight !== '0px') {
+            el.style.maxHeight = '0px';
+        } else {
+            el.style.maxHeight = `${el.scrollHeight}px`;
+        }
+    }
+}
 
-		// Bar.
-			$(
-				'<div id="titleBar">' +
-					'<a href="#navPanel" class="toggle"></a>' +
-					'<span class="title">' + $('#logo').html() + '</span>' +
-				'</div>'
-			)
-				.appendTo($body);
+function openNavA() {
+    openNavItem(document.getElementById('navA'))
+}
+function openNavB() {
+    openNavItem(document.getElementById('navB'))
+}
+function openNavC() {
+    openNavItem(document.getElementById('navC'))
+}
+function openNavD() {
+    openNavItem(document.getElementById('navD'))
+}
+function openNavE() {
+    openNavItem(document.getElementById('navE'))
+}
 
-		// Panel.
-			$(
-				'<div id="navPanel">' +
-					'<nav>' +
-						$('#nav').navList() +
-					'</nav>' +
-				'</div>'
-			)
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'left',
-					target: $body,
-					visibleClass: 'navPanel-visible'
-				});
+// breakpoints
+function checkBreakpoint() {
+    if (window.innerWidth <= bp0) {
+        bp = 0
+    } else if (window.innerWidth <= bp1) {
+        bp = 1
+    } else {
+        bp = 2
+    }
+    console.log('current breakpoint: '+ bp)
+    return bp
+}
 
-})(jQuery);
+// change header color
+// window.addEventListener('scroll', function() {
+//     const titleBar = document.getElementById('title-bar')
+//     const scrollTop = window.scrollY;
+//     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+//     const scrollRatio = scrollTop / docHeight;
+//     r = Math.min(255, (1 + 3 * scrollRatio) * 16);
+//     g = Math.min(255, (3 + 5 * scrollRatio) * 16);
+//     b = Math.min(255, (1 + 0 * scrollRatio) * 16);
+//     titleBar.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+// })
+
+window.addEventListener('resize', function() {
+    bp_old = bp
+    bp = checkBreakpoint();
+    if (bp_old != bp) {
+        updateNavClass();
+        location.reload()
+        console.log('breakpoint switch: ' + bp_old + ' to ' + bp)
+    }
+})
+
+function updateNavClass() {
+    console.log('updating nav class')
+    var el = document.getElementById('nav');
+    if (bp <= 1) {
+        el.classList.add('nav-panel');
+        el.classList.remove('nav-bar');
+        console.log('changed to panel')
+    } else if (bp > 1) {
+        el.classList.remove('nav-panel');
+        el.classList.add('nav-bar');
+        console.log('changed to bar')
+    }
+}
+
+// dropdowns
+$('.nav-bar ul').dropotron({
+    hoverDelay: 0,
+    alignment: 'center'
+});
+
+// scroll
+function scrollToForm() {
+    const form = document.getElementById("form")
+    const pos = form.getBoundingClientRect();
+    window.scrollBy({
+        top: pos.top - 80,
+        behavior: 'smooth'
+    })
+    if (bp < 2) {
+        closeNav()
+    }
+}
