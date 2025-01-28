@@ -14,6 +14,7 @@
     --green2: #131;
     --green3: #493;
     --orange1: #f80;
+    --orange2: #a40;
     --xs: 320px;
     --sm: 375px;
     --md: 425px;
@@ -57,7 +58,9 @@ textarea {
 
 body {
     background-color: var(--white2);
-    background-image: url("images/bg01.png");
+    /* background-image: url("images/bg.png");
+    background-position: cover;
+    background-size: 100% 100%; */
     padding: 3em 0em 0em 0em;
 }
 
@@ -127,7 +130,7 @@ img {
     max-height: 100%;
     width: auto;
     height: auto;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 a.img {
@@ -275,7 +278,6 @@ a.img::after {
     color: var(--white3);
     display: flex;
     justify-content: center;
-    align-items: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -284,44 +286,51 @@ a.img::after {
 }
 
 .nav-bar ul{
-    height: fit-content;
+    height: 100%;
 }
 
 .nav-bar ul>li {
     display: inline-flex;
+    height: inherit;
+    margin: 0 0.3em 0 0.3em;
 }
 
-.nav-bar ul>li a {
+.nav-bar ul>li>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--white1);
     font-size: 15pt;
-    padding: 2em 1em 2em 1em;
+    height: 100%;
+    min-width: 2em;
+    padding: 0 0.4em 0 0.4em;
 }
 
-.nav-bar ul>li a:hover {
-    background-color: rgb(255, 255, 255, 0.1);
+.nav-bar ul>li>a:hover {
+    background-color: rgb(255, 255, 255, 0.05);
 }
 
-.nav-bar ul>li a::after {
-    bottom: 1.8em;
-    left: 12.5%;
+.nav-bar ul>li>a::after {
     background-color: rgba(0, 0, 0, 0);
+    bottom: 1.9em;
+    left: 0.4em;
 }
 
-.nav-bar ul>li a:hover::after {
-    width: 75%;
-    left: 12.5%;
-    background-color: var(--white1)
+.nav-bar ul>li>a:hover::after {
+    background-color: var(--white1);
+    width: calc(100% - 0.8em);
 }
 
 .nav-bar ul>li.current {
-    background-color: rgb(255, 255, 255, 0.1);
+    background-color: rgb(255, 255, 255, 0.05);
     font-weight: 600;
 }
 
 .dropotron {
-    background-color: var(--black3);
-    border-radius: 0.3em;
+    background-color: var(--gray3);
     min-width: 10em;
+    box-shadow: 5px -5px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 3px;
 }
 
 .dropotron>li>a {
@@ -377,7 +386,7 @@ a.img::after {
     bottom: 0;
     background-color: var(--white3);
     opacity: 0.7;
-    background-image: url("images/sun.png"), url("images/moon.png"), url("images/bg01.png"), url("images/bg02.png"), url("images/bg03.png");
+    background-image: url("images/sun.png"), url("images/moon.png");
     background-size: auto 60%, auto 60%;
     background-repeat: no-repeat, no-repeat;
     background-position: 15% center, 85% center;
@@ -606,7 +615,7 @@ input:checked+.slider:before {
 }
 
 /* fullscreen */
-@media screen and (min-width: 1141px) {
+@media screen and (min-width: 1201px) {
     body {
         padding-top: 0;
     }
