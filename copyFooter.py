@@ -15,7 +15,7 @@ def read_footer(page):
     lines = f.readlines()
     f.close()
     for line in lines:
-        if '<div class="footer"' in line:
+        if '<!-- footer -->' in line:
             write = True
         if write:
             footer.append(line)
@@ -27,7 +27,7 @@ def replace_footer(footer, page):
         lines = f.readlines()
     f = open(page, 'w', encoding='utf-8')
     for line in lines:
-        if '<div class="footer"' in line:
+        if '<!-- footer -->' in line:
             write = False
             for new_line in footer:
                 f.write(new_line)

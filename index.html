@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
     <div class="page-margins">
 
         <!-- navigation -->
@@ -19,11 +20,13 @@
             <button id="nav-close-btn" onclick=closeNav() type="button" title="closeNav"></button>
             <ul>
                 <li class="current"><a href="index.html">Home</a></li>
-                <li><a href="documents/cv.pdf" target="_blank">Curriculum Vitae</a></li>
-                <li><a href="javascript:void(0)" onclick=openNavA()>Modeling</a>
+                <li><a href="documents/cv.pdf" target="_blank">CV</a></li>
+                <li><a href="javascript:void(0)" onclick=openNavA()>Research</a>
                     <ul id="navA">
-                        <li><a href="modeling-plasma.html">Ionospheric Plasma</a></li>
-                        <li><a href="coming-soon.html">CAD Modeling</a></li>
+                        <li><a href="modeling-plasma.html">Ionospheric Plasma Modeling</a></li>
+                        <li><a href="coming-soon.html">Auroral System Science</a></li>
+                        <li><a href="coming-soon.html">Computer Aided Design</a></li>
+                        <li><a href="coming-soon.html">Meetings & Conferences</a></li>
                     </ul>
                 </li>
                 <li><a href="javascript:void(0)" onclick=openNavB()>Rocket Science</a>
@@ -54,19 +57,17 @@
                         <li><a href="coming-soon.html">Other Courses</a></li>
                     </ul>
                 </li>
-                <li><a href="javascript:void(0)" onclick=openNavE()>Conferences</a>
+                <li><a href="javascript:void(0)" onclick=openNavE()>Publications</a>
                     <ul id="navE">
-                        <li><a href="coming-soon.html">AGU</a></li>
-                        <li><a href="coming-soon.html">CEDAR</a></li>
-                        <li><a href="coming-soon.html">EZIE</a></li>
-                        <li><a href="coming-soon.html">CHAPMAN</a></li>
-                        <li><a href="coming-soon.html">SWARM</a></li>
+                        <li><a href="coming-soon.html">van Irsel, et al. (2025), <em>JGR</em></a></li>
+                        <li><a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024JA032722" target="_blank">van Irsel, et al. (2024), <em>JGR</em></a></li>
+                        <li><a href="https://ntrs.nasa.gov/api/citations/20240008784/downloads/Section%20D.pdf" target="_blank">Lynch, et al. (2024), <em>JGR</em></a></li>
                     </ul>
                 </li>
                 <li><a href="javascript:void(0)" onclick=scrollToForm()>Contact</a></li>
             </ul>
         </nav>
-
+        
         <!-- dark mode -->
         <div id="dark">
             <label class="switch">
@@ -78,7 +79,7 @@
         <!-- bio -->
         <section id="bio" class="content">
             <a href="images/headshot.jpg" target="_blank" class="img"><img src="images/headshot-small.jpg" title="headshot"></a>
-            <div class="caption">
+            <div class="caption-right">
                 <h1>Biography</h1>
                 <p>
                     Welcome to my online outline of personal and professional endeavors.
@@ -98,20 +99,25 @@
 
         <div class="hline"></div>
 
-        <div class="section-title"><p>Professional Highlights:</p></div>
+        <div class="section-title">
+            <p>Professional Highlights:</p>
+        </div>
 
         <div class="hline"></div>
-        
+
         <!-- content -->
         <div class="content">
             <div class="caption">
                 <h2>Multi-Fluid Plasma Modeling</h2>
                 <p>
-                    Throughout my Ph.D. I have worked extensively with state-of-the-art 3D ionospheric simulations provided by the Geospace Environment Model of Ion-Neutral Interactions, or <a href="https://github.com/gemini3d" target="_blank">GEMINI</a>.
+                    Throughout my Ph.D. program, I have worked extensively with state-of-the-art 3D ionospheric simulations provided by the Geospace Environment Model of Ion-Neutral Interactions, or <a href="https://github.com/gemini3d" target="_blank">GEMINI</a>, using the NASA Advanced Supercomputing (NAS) Division at Ames Research Center.
                     <br><br>
-                    In brief, GEMINI, developed in large part by <a href="https://scholar.google.com/citations?user=tMhU3x8AAAAJ&hl=en" target="_blank">Matt Zettergren</a>, <a href="https://scholar.google.com/citations?user=4ghHyKAAAAAJ&hl=en&oi=ao" target="_blank">Joshua Semeter</a>, and <a href="https://scholar.google.com/citations?user=Ravy8AQAAAAJ&hl=en&oi=ao" target="_blank">Jonathan Snively</a>, is a multi-fluid, quasi-electrostatic model which keeps track of the various state parameters, such as pressure and temperature, of electrons and six different ion species as they succumb to electromagnetic, gravitational, and fluid forces. 
+                    In brief, GEMINI was first created by <a href="https://scholar.google.com/citations?user=tMhU3x8AAAAJ&hl=en" target="_blank">Matt Zettergren</a>, <a href="https://scholar.google.com/citations?user=4ghHyKAAAAAJ&hl=en&oi=ao" target="_blank">Joshua Semeter</a>, and <a href="https://scholar.google.com/citations?user=Ravy8AQAAAAJ&hl=en&oi=ao" target="_blank">Jonathan Snively</a>, and is continuously evolving.
+                    It is a multi-fluid, quasi-electrostatic model which keeps track of the various state parameters, such as pressure and temperature, of electrons and six different ion species as they succumb to electromagnetic, gravitational, and fluid forces.
+                    Find out <a href="modeling-plasma.html">more</a> about my own contributions to this model!
                     <br><br>
-                    Find out <a href="coming-soon.html">more</a> about my own contributions to this model!
+                    A large part of my research has been funded by NASA's <em>Future Investigators in NASA Earth and Space Science and Technology</em> (FINESST) 2022 solicitation.
+                    Feel free to have a look at my <a href="documents/finesst-proposal.pdf" target="_blank">proposal</a>!
                 </p>
             </div>
             <a href="images/gemini.png" target="_blank" class="img">
@@ -127,9 +133,13 @@
                 <p>
                     I have provided support on proposals for several NASA funding solicitations, including the 2019 Heliophysics Medium-Class Explorer proposal named the <a href="https://explorers.larc.nasa.gov/HPMIDEX/announcements.html" target="_blank">Auroral Reconstruction CubeSwarm</a> (ARCS).
                     <br><br>
-                    Through an array of 32 CubeSats (red) and many ground-based, all-sky observatories spanning most of Alaska (green), this proposed mission aims to uncover the physics behind temporal and spatial gradients pertaining to auroral ionospheric plasma. Such gradients are impossible to measure with 1-dimensional data tracks provided by singular spacecraft.
+                    Through an array of 32 CubeSats (as shown here in red) and many ground-based, all-sky observatories spanning most of Alaska (green), this proposed mission aims to uncover the physics behind temporal and spatial gradients pertaining to auroral ionospheric plasma.
+                    Such gradients are impossible to measure with 1-dimensional data tracks provided by singular spacecraft.
                     <br><br>
-                    My contributions to this work included providing a catalog Observing System Simulation Experiments (OSSE), using GEMINI, to ensure proper measurement tolerances and redundancies.
+                    My contributions to this work includes providing a <a href="https://rcweb.dartmouth.edu/LynchK/Gemini3D/?C=M;O=D" target="_blank">catalog</a> Observing System Simulation Experiments (OSSE), using GEMINI, to ensure specific measurement tolerances and proper redundancies.
+                    <br><br>
+                    Find out more about the <a href="coming-soon.html">ARCS</a>, my work on the 2022 Heliophysics Low Cost Access to Space (<a href="coming-soon.html">HLCAS</a>) proposal, or my own <a href="coming-soon.html">NASA FINESST</a> proposal for graduate funding!
+                    <!-- In such an OSSE, a simulation of an arbritrary auroral arc systems is treated as ground truth, and the virtual spacecraft array orbits through the model space and interpolates data based  -->
                 </p>
             </div>
             <a href="images/arcs-orbit.gif" target="_blank" class="img">
@@ -145,7 +155,7 @@
                 <p>
                     In addition to my research, I also do testing and field work providing support for sounding rocket instruments. Two such instruments I have worked with are the <a href="https://ucalgary.ca/news/scientists-mini-instruments-help-measure-weather-space" target="_blank">Miniature Plasma Imager</a> (MPI) developed by <a href="https://scholar.google.com/citations?hl=en&user=r3QmRkoAAAAJ" target="_blank">Johnathan Burchill</a> et al., and <a href="https://pubs.aip.org/aip/rsi/article/91/9/094503/908508/Auroral-ionospheric-plasma-flow-extraction-using" target="_blank">Petite Ion Probes</a> (PIP) developed by <a href="https://faculty-directory.dartmouth.edu/kristina-anne-lynch" target="_blank">Kristina Lynch</a> et al.
                     <br><br>
-                    This support includes electronics, hardware, vibration, ultra-high vacuum, plasma, and general system testing, as well as integration of these instrument systems into various sounding rocket payloads. 
+                    This support includes electronics, hardware, vibration, ultra-high vacuum, plasma, and general system testing, as well as integration of these instrument systems into various sounding rocket payloads.
                     <br><br>
                     Image credit: <a href="https://www.justinhartney.com/" target="_blank">Justin Hartney</a>.
                 </p>
@@ -171,10 +181,13 @@
 
         <div class="hline"></div>
 
-        <!-- footer -->
+    </div>
+
+    <!-- footer -->
+    <div class="footer-margins">
         <div class="footer" id="footer">
             <div id="form">
-                <h3>Get in Touch</h3>
+                <h4>Get in Touch</h4>
                 <form action="https://formspree.io/f/xrgnerza" method="post">
                     <input type="text" name="name" id="name" placeholder="Name" autocomplete="off" />
                     <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" />
@@ -185,7 +198,7 @@
 
             <div id="links">
                 <div>
-                    <h3>Transcripts</h3>
+                    <h5>Transcripts</h5>
                     <ul>
                         <li><a href="documents/transcript_dartmouth.pdf" target="_blank">Dartmouth College</a></li>
                         <li><a href="documents/transcript_uofc.pdf" target="_blank">University of Calgary</a></li>
@@ -194,16 +207,16 @@
                 </div>
 
                 <div>
-                    <h3>Selected Publications</h3>
+                    <h5>Selected Publications</h5>
                     <ul>
+                        <li><a href="coming-soon.html" target="_blank">van Irsel et al. (2025), <em>JGR</em></a></li>
                         <li><a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024JA032722" target="_blank">van Irsel et al. (2024), <em>JGR</em></a></li>
                         <li><a href="https://ntrs.nasa.gov/api/citations/20240008784/downloads/Section%20D.pdf" target="_blank">Lynch et al. (2024), <em>JGR</em></a></li>
-                        <li><a href="coming-soon.html" target="_blank">van Irsel et al. (2025), <em>JGR</em></a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3>Documents</h3>
+                    <h5>Documents</h5>
                     <ul>
                         <li><a href="documents/cv.pdf" target="_blank">Curriculum Vitae</a></li>
                         <li><a href="coming-soon.html" target="_blank">Dissertation</a></li>
@@ -213,7 +226,7 @@
                 </div>
 
                 <div>
-                    <h3>In the news</h3>
+                    <h5>In the news</h5>
                     <ul>
                         <li><a href="https://www.bostonglobe.com/2023/10/13/metro/darmouth-professor-kristina-lynch-rockets-eclipse-nasa/" target="_blank">Rockets Studying the Eclipse</a></li>
                         <li><a href="https://www.astech.ca/archives/indexofpastwinners/space-physics-group-university-of-calgary" target="_blank">2018 ASTech Special Award</a></li>
@@ -222,22 +235,23 @@
                     </ul>
                 </div>
             </div>
-            
+
         </div>
-        
+
         <!-- icons -->
         <div class="icons">
             <a href="https://github.com/julesvanirsel" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/jules-van-irsel-a3413695" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.instagram.com/juicevanirsel" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
-        
+
         <!-- copyright -->
-         <div class="copyright" id="copyright">
+        <div class="copyright" id="copyright">
             © 2025 Jules van Irsel
-         </div>
+        </div>
 
     </div>
+
 </body>
 
 <!-- scripts -->

@@ -19,11 +19,13 @@
             <button id="nav-close-btn" onclick=closeNav() type="button" title="closeNav"></button>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="documents/cv.pdf" target="_blank">Curriculum Vitae</a></li>
-                <li><a href="javascript:void(0)" onclick=openNavA()>Modeling</a>
+                <li><a href="documents/cv.pdf" target="_blank">CV</a></li>
+                <li><a href="javascript:void(0)" onclick=openNavA()>Research</a>
                     <ul id="navA">
-                        <li><a href="modeling-plasma.html">Ionospheric Plasma</a></li>
-                        <li><a href="coming-soon.html">CAD Modeling</a></li>
+                        <li><a href="modeling-plasma.html">Ionospheric Plasma Modeling</a></li>
+                        <li><a href="coming-soon.html">Auroral System Science</a></li>
+                        <li><a href="coming-soon.html">Computer Aided Design</a></li>
+                        <li><a href="coming-soon.html">Meetings & Conferences</a></li>
                     </ul>
                 </li>
                 <li><a href="javascript:void(0)" onclick=openNavB()>Rocket Science</a>
@@ -54,13 +56,11 @@
                         <li><a href="coming-soon.html">Other Courses</a></li>
                     </ul>
                 </li>
-                <li><a href="javascript:void(0)" onclick=openNavE()>Conferences</a>
+                <li><a href="javascript:void(0)" onclick=openNavE()>Publications</a>
                     <ul id="navE">
-                        <li><a href="coming-soon.html">AGU</a></li>
-                        <li><a href="coming-soon.html">CEDAR</a></li>
-                        <li><a href="coming-soon.html">EZIE</a></li>
-                        <li><a href="coming-soon.html">CHAPMAN</a></li>
-                        <li><a href="coming-soon.html">SWARM</a></li>
+                        <li><a href="coming-soon.html">van Irsel, et al. (2025), <em>JGR</em></a></li>
+                        <li><a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024JA032722" target="_blank">van Irsel, et al. (2024), <em>JGR</em></a></li>
+                        <li><a href="https://ntrs.nasa.gov/api/citations/20240008784/downloads/Section%20D.pdf" target="_blank">Lynch, et al. (2024), <em>JGR</em></a></li>
                     </ul>
                 </li>
                 <li><a href="javascript:void(0)" onclick=scrollToForm()>Contact</a></li>
@@ -80,10 +80,13 @@
         <marquee><h1>Website under construction</h1></marquee>
         <div class="hline"></div>
 
-        <!-- footer -->
+    </div>
+
+    <!-- footer -->
+    <div class="footer-margins">
         <div class="footer" id="footer">
             <div id="form">
-                <h3>Get in Touch</h3>
+                <h4>Get in Touch</h4>
                 <form action="https://formspree.io/f/xrgnerza" method="post">
                     <input type="text" name="name" id="name" placeholder="Name" autocomplete="off" />
                     <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" />
@@ -94,7 +97,7 @@
 
             <div id="links">
                 <div>
-                    <h3>Transcripts</h3>
+                    <h5>Transcripts</h5>
                     <ul>
                         <li><a href="documents/transcript_dartmouth.pdf" target="_blank">Dartmouth College</a></li>
                         <li><a href="documents/transcript_uofc.pdf" target="_blank">University of Calgary</a></li>
@@ -103,16 +106,16 @@
                 </div>
 
                 <div>
-                    <h3>Selected Publications</h3>
+                    <h5>Selected Publications</h5>
                     <ul>
+                        <li><a href="coming-soon.html" target="_blank">van Irsel et al. (2025), <em>JGR</em></a></li>
                         <li><a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024JA032722" target="_blank">van Irsel et al. (2024), <em>JGR</em></a></li>
                         <li><a href="https://ntrs.nasa.gov/api/citations/20240008784/downloads/Section%20D.pdf" target="_blank">Lynch et al. (2024), <em>JGR</em></a></li>
-                        <li><a href="coming-soon.html" target="_blank">van Irsel et al. (2025), <em>JGR</em></a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3>Documents</h3>
+                    <h5>Documents</h5>
                     <ul>
                         <li><a href="documents/cv.pdf" target="_blank">Curriculum Vitae</a></li>
                         <li><a href="coming-soon.html" target="_blank">Dissertation</a></li>
@@ -122,7 +125,7 @@
                 </div>
 
                 <div>
-                    <h3>In the news</h3>
+                    <h5>In the news</h5>
                     <ul>
                         <li><a href="https://www.bostonglobe.com/2023/10/13/metro/darmouth-professor-kristina-lynch-rockets-eclipse-nasa/" target="_blank">Rockets Studying the Eclipse</a></li>
                         <li><a href="https://www.astech.ca/archives/indexofpastwinners/space-physics-group-university-of-calgary" target="_blank">2018 ASTech Special Award</a></li>
@@ -131,22 +134,23 @@
                     </ul>
                 </div>
             </div>
-            
+
         </div>
-        
+
         <!-- icons -->
         <div class="icons">
             <a href="https://github.com/julesvanirsel" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/jules-van-irsel-a3413695" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.instagram.com/juicevanirsel" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
-        
+
         <!-- copyright -->
-         <div class="copyright" id="copyright">
+        <div class="copyright" id="copyright">
             © 2025 Jules van Irsel
-         </div>
+        </div>
 
     </div>
+
 </body>
 
 <!-- scripts -->

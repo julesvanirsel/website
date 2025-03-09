@@ -1,18 +1,9 @@
 const darkmode = document.getElementById("darkmode");
 const body = document.body;
-// const caption = document.getElementsByClassName('caption');
 const paragraphs = document.getElementsByTagName('p');
 const headers1 = document.getElementsByTagName('h1');
 const headers2 = document.getElementsByTagName('h2');
 const headers3 = document.getElementsByTagName('h3');
-// const footer = document.getElementsByClassName('footer');
-// const sectionTitle = document.getElementsByClassName('section-title');
-// const links = document.getElementsByClassName("links")
-// const form0 = document.getElementById("form")
-// const form1 = document.getElementById("name");
-// const form2 = document.getElementById("email");
-// const form3 = document.getElementById("message");
-// const copy = document.getElementById("copyright")
 
 window.onload = function () {
     loadSwitchState();
@@ -29,11 +20,6 @@ function darkmodeToggle() {
     swap(headers1, 20)
     swap(headers2, 20)
     swap(headers3, 20)
-    // swap([body, form0, copy], 20);
-    // swap(caption, 20)
-    // swap(sectionTitle, 20)
-    // swap(footer, 20)
-    // swap([form1, form2, form3], 60)
     switchImage('gemini')
 }
 

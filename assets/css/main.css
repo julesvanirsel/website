@@ -10,6 +10,7 @@
     --black1: #141010;
     --black2: #242020;
     --black3: #343030;
+    --green0: #001800;
     --green1: #020;
     --green2: #131;
     --green3: #493;
@@ -31,6 +32,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p,
 a,
 ul,
@@ -40,9 +42,9 @@ button,
 form,
 textarea {
     font-family: "Quicksand", sans-serif;
-    font-size: 14pt;
+    font-size: 12pt;
     font-optical-sizing: auto;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
     letter-spacing: 0.08em;
     padding: 0;
@@ -58,9 +60,6 @@ textarea {
 
 body {
     background-color: var(--white2);
-    /* background-image: url("images/bg.png");
-    background-position: cover;
-    background-size: 100% 100%; */
     padding: 3em 0em 0em 0em;
 }
 
@@ -75,7 +74,9 @@ h2 {
     font-size: x-large;
     font-weight: 600;
     line-height: 100%;
-    padding: 0.3em 0 0.3em 0;
+    padding: 0.3em 0 0.3em 0.3em;
+    margin-bottom: 0.8em;
+    /* background: linear-gradient(90deg, var(--green2) 50%, rgba(0,0,0,0) 90%); */
 }
 
 h3 {
@@ -88,6 +89,12 @@ h4 {
     font-weight: 600;
     line-height: 100%;
     padding: 0.3em 0 0.3em 0;
+    color: var(--white2);
+}
+
+h5 {
+    font-size: medium;
+    font-weight: 600;
     color: var(--white2);
 }
 
@@ -112,8 +119,8 @@ a::after {
     content: "";
     position: absolute;
     width: 0;
-    height: 1px;
-    bottom: -1px;
+    height: 1.5px;
+    bottom: -1.5px;
     left: 0;
     background-color: var(--green3);
     transition: width 0.4s ease-in-out, background-color 0.3s ease-in-out
@@ -312,7 +319,7 @@ a.img::after {
 
 .nav-bar ul>li>a::after {
     background-color: rgba(0, 0, 0, 0);
-    bottom: 1.9em;
+    bottom: 1.6em;
     left: 0.4em;
 }
 
@@ -342,7 +349,7 @@ a.img::after {
 
 .dropotron>li>a::after {
     background-color: rgba(0, 0, 0, 0);
-    height: 1px;
+    height: 0.1em;
     bottom: 0px;
 }
 
@@ -452,12 +459,17 @@ input:checked+.slider:before {
 }
 
 /* footer */
+.footer-margins {
+    background-color: var(--green0);
+    padding: 1.5em 7% 2em 7%;
+}
+
 .footer {
     display: grid;
     grid-template-columns: 1fr;
 }
 
-.footer h3 {
+.footer h5 {
     padding: 1em 0 0.5em 0;
     text-align: center;
 }
@@ -468,13 +480,13 @@ input:checked+.slider:before {
 
 .footer a {
     width: fit-content;
-    font-size: 12pt;
+    font-size: 10pt;
     margin: 0 0 0.5em 0;
-    color: var(--gray2);
+    color: var(--gray1);
 }
 
 .footer a::after {
-    color: var(--white3);
+    background-color: var(--gray1);
 }
 
 .footer #form {
@@ -504,11 +516,11 @@ input:checked+.slider:before {
 .icons {
     display: flex;
     justify-content: center;
-    padding: 2em 0 0.5em 0;
+    padding: 1.5em 0 0 0;
 }
 
 .icons a {
-    font-size: 25pt;
+    font-size: 20pt;
     padding: 0 0.3em 0 0.3em;
     color: var(--gray2);
 }
@@ -575,6 +587,11 @@ input:checked+.slider:before {
         margin: 0 2em 0 0
     }
 
+    .content .caption-right {
+        margin: 0 0 0 2em;
+        text-align: left
+    }
+
     #bio {
         grid-template-columns: 1fr 2fr;
         margin: 2em 0 0 0
@@ -594,10 +611,6 @@ input:checked+.slider:before {
 
     .footer #links {
         grid-template-columns: 1fr 1fr;
-    }
-
-    .icons a {
-        font-size: 30pt;
     }
 
     .textbook {
@@ -630,8 +643,8 @@ input:checked+.slider:before {
 
     #dark {
         position: absolute;
-        top: 8em;
-        right: 2em;
+        top: 7em;
+        right: 1em;
     }
 
     .slider {
@@ -650,7 +663,7 @@ input:checked+.slider:before {
         grid-template-columns: 1.5fr 1fr;
     }
 
-    .footer li, .footer h3 {
+    .footer li, .footer h5 {
         text-align: left;
     }
 
