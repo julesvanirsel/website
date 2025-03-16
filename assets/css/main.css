@@ -75,8 +75,7 @@ h2 {
     font-weight: 600;
     line-height: 100%;
     padding: 0.3em 0 0.3em 0.3em;
-    margin-bottom: 0.8em;
-    /* background: linear-gradient(90deg, var(--green2) 50%, rgba(0,0,0,0) 90%); */
+    margin-bottom: 0.3em;
 }
 
 h3 {
@@ -279,9 +278,10 @@ a.img::after {
 
 /* nav bar */
 .nav-bar {
-    background-image: url("../../images/header.jpg");
-    background-position: center;
-    background-size: cover;
+    /* background-image: url("../../images/header.jpg"); */
+    /* background-position: center; */
+    /* background-size: cover; */
+    background-color: var(--green1);
     color: var(--white3);
     display: flex;
     justify-content: center;
