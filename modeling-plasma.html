@@ -38,6 +38,7 @@
                         <li><a href="https://sites.wff.nasa.gov/code810/news/story227-35.039%20VISIONS.html" target="_blank">VISIONS-2</a></li>
                         <li><a href="coming-soon.html">Data Parsing</a></li>
                         <li><a href="coming-soon.html">Vacuum Testing</a></li>
+                        <li><a href="coming-soon.html">Fieldwork</a></li>
                     </ul>
                 </li>
                 <li><a href="javascript:void(0)" onclick=openNavC()>Proposals</a>
@@ -77,7 +78,7 @@
 
         <div class="hline"></div>
 
-        <div class="section-title"><p>Ionospheric Plasma Modeling:</p></div>
+        <div class="section-title"><p>Ionospheric Plasma Modeling</p></div>
 
         <div class="hline"></div>
         
@@ -89,7 +90,25 @@
             <div class="caption-right">
                 <h2>GEMINI</h2>
                 <p>
-                    GEMINI, or Geospace Environment Model of Ion-Neutral Interactions is a state-of-the-art 3D...
+                    The ionospheric simulations I carry out for my Ph.D. research use the <em>Geospace Environment Model of
+                    Ion-Neutral Interactions</em>, or GEMINI, which is a state-of-the-art 3D, ionospheric model. It was first
+                    introduced by <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2012JA017637" target="_blank">Zettergren & Semeter</a>
+                    in 2012 and formalized in Appendix A by
+                    <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2015JA021116" target="_blank">Zettergren & Snively</a>
+                    in 2015. The 3D version of the model was then developed in 2019 by
+                    <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018GL081569" target="_blank">Zettergren & Snively</a>
+                    as well.
+                    <br><br>
+                    For those interested in a technical description of the model: GEMINI is a multi-fluid (6 ions + electrons),
+                    quasi-electrostatic model written in FORTRAN 90. Its calculations of particle continuity consisting of chemical production/loss
+                    and photo/impact ionization. Calculations of local densities, plasma flows, and temperatures are treated
+                    self-consistently and the model includes thermal conduction heat flux, collisional heating, thermoelectric
+                    electron heat flux, and inelastic cooling/heating from photoelectrons. This is supplemented with Maxwell's
+                    equations but, at this time, includes no displacement current or magnetic induction effects. With this, the
+                    system is solved through enforcing divergence-free currents, curl-free electric fields, and invoking Ohm's law.
+                    <br><br>
+                    If you want to check out this model, have a look at thier github
+                    <a href="https://github.com/gemini3d/gemini3d" target="_blank">repository</a>!
                 </p>
             </div>
         </div>
@@ -100,7 +119,23 @@
             <div class="caption">
                 <h2>GEMINI Contributions</h2>
                 <p>
-                    Throughout my Ph.D. I have
+                    A proud moment for me was my first pull request to GEMINI's source code. One of the problems I address in my
+                    research is the effect that the energy characteristics of the precipiating electrons have on the auroral arc
+                    system, which cause the auroral light that we know and love. I incorporated more versatile methods of defining
+                    these characteristics using the empirical model introduced by
+                    <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2010GL045406" target="_blank">Fang et al. (2010)</a>.
+                    <br><br>
+                    In this context, there are two things to consider when looking at the electrons raining down into our atmosphere:
+                    1) how many there are, also known as their <em>total precipitating energy flux</em>, and 2) what energy do they
+                    have? The latter consideration is outlined by what is known as the <em>differential number flux</em>.
+                    <br><br>
+                    This number flux has thusfar been defined using a form of the Maxwell-Boltzmann distribution which is
+                    characterized by a single energy. Unfortunately, this energy is both what defines the average energy of the
+                    electrons raining down, but it is also, through some definition, it defines the temperature of them at their
+                    source region in outer space.
+                    <br><br>
+                    There is no physical reason for these two energies to be the same, which is why I developed code that allows for
+                    a user-defined differential number flux when running GEMINI simulations.
                 </p>
             </div>
             <a href="images/gemini-code.png" target="_blank" class="img">
@@ -143,9 +178,9 @@
                 <div>
                     <h5>Transcripts</h5>
                     <ul>
-                        <li><a href="documents/transcript_dartmouth.pdf" target="_blank">Dartmouth College</a></li>
-                        <li><a href="documents/transcript_uofc.pdf" target="_blank">University of Calgary</a></li>
-                        <li><a href="documents/transcript_sait.pdf" target="_blank">SAIT Polytechnic</a></li>
+                        <li><a href="documents/transcript-dartmouth.pdf" target="_blank">Dartmouth College</a></li>
+                        <li><a href="documents/transcript-uofc.pdf" target="_blank">University of Calgary</a></li>
+                        <li><a href="documents/transcript-sait.pdf" target="_blank">SAIT Polytechnic</a></li>
                     </ul>
                 </div>
 
