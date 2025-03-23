@@ -149,7 +149,38 @@
             <div class="caption">
                 <h2>Aurora GEMINI</h2>
                 <p>
-                    Throughout vdfvfdvfd
+                    GEMINI is a FORTRAN 90 code which has a MATLAB wrapper to handle basic input and output commands surrounding
+                    simulations. I developed a secondary wrapper surrounding all that called
+                    <a href="https://github.com/317Lab/aurora_gemini" target="_blank">Aurora GEMINI</a>. It handles interfacing
+                    GEMINI with auroral systems in mind.
+                    <br><br>
+                    This toolset is seamlessly integrated into the GEMINI MATLAB wrapper. Some of its main functionalities include
+                    the implementation of the reconstruction and replication techniques, as well as current flux tube generation and
+                    visualization outlined in van Irsel et al.
+                    (<a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024JA032722" target="_blank">2024</a>, 
+                    <a href="coming-soon.html">2025</a>). The replication technique allows for the extrapolation of 1D tracked data,
+                    such as that from spacecraft, by using maximal information provided by auroral images. This is required to be
+                    able to use these data for the driving of GEMINI simulations.
+                    <br><br>
+                    Current flux tubes are an invention of mine that provide much improved visualization of current closure through
+                    the atmosphere. They are analogous to magnetic flux tubes in that they simply conserve electric current
+                    throughout them and utilize their divergence-free conditions. They represent invisible electric wires that are
+                    several square kilometers in cross-section, with kiloamps of current passing through them.
+                    <br><br>
+                    Additionally, this toolset allows for:
+                    <ol>
+                        <li>- Interfacing with The GLobal airglOW Model (<a href="https://www2.hao.ucar.edu/modeling/glow" target="_blank">GLOW</a>)</li>
+                        <li>- Grid plotting over the Northern auroral oval (shown here)</li>
+                        <li>- Generating PBS and/or SLURM scripts for use in cluster computing</li>
+                        <li>- Generating, setup, and running of simulation initial condition runs</li>
+                        <li>- Providing ionization rate altitude profiles using methods by Fang et al.
+                            (<a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2008JA013384" target="_blank">2008</a>,
+                            <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2010GL045406" target="_blank">2010</a>)
+                        <li>- Many other useful tools and functions.</li>
+                    </ol>
+                    This toolset developed out of my thesis GitHub
+                    <a href="https://github.com/julesvanirsel/thesis" target="_blank">repository</a>, and grew into something well
+                    worth sharing with the scientific community. It is a key outcome of my Ph.D. research.
                 </p>
             </div>
             <a href="images/aurora-gemini.png" target="_blank" class="img">
