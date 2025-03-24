@@ -75,10 +75,119 @@
                 <span class="slider round"></span>
             </label>
         </div>
+
+        <div class="hline"></div>
+
+        <div class="section-title"><p>Ionospheric Plasma Modeling</p></div>
+
+        <div class="hline"></div>
         
         <!-- content -->
+        <div class="content">
+            <a href="images/gemini.gif" target="_blank" class="img">
+                <img id="gemini" src="images/gemini.png" title="gemini">
+            </a>
+            <div class="caption-right">
+                <h2>GEMINI</h2>
+                <p>
+                    The ionospheric simulations I carry out for my Ph.D. research use the <em>Geospace Environment Model of
+                    Ion-Neutral Interactions</em>, or GEMINI, which is a state-of-the-art 3D, ionospheric model. It was first
+                    introduced by <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2012JA017637" target="_blank">Zettergren & Semeter</a>
+                    in 2012 and formalized in Appendix A by
+                    <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2015JA021116" target="_blank">Zettergren & Snively</a>
+                    in 2015. The 3D version of the model was then developed in 2019 by
+                    <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018GL081569" target="_blank">Zettergren & Snively</a>
+                    as well.
+                    <br><br>
+                    For those interested in a technical description of the model: GEMINI is a multi-fluid (6 ions + electrons),
+                    quasi-electrostatic model written in FORTRAN 90. Its calculations of particle continuity consisting of chemical production/loss
+                    and photo/impact ionization. Calculations of local densities, plasma flows, and temperatures are treated
+                    self-consistently and the model includes thermal conduction heat flux, collisional heating, thermoelectric
+                    electron heat flux, and inelastic cooling/heating from photoelectrons. This is supplemented with Maxwell's
+                    equations but, at this time, includes no displacement current or magnetic induction effects. With this, the
+                    system is solved through enforcing divergence-free currents, curl-free electric fields, and invoking Ohm's law.
+                    <br><br>
+                    If you want to check out this model, have a look at thier github
+                    <a href="https://github.com/gemini3d/gemini3d" target="_blank">repository</a>!
+                </p>
+            </div>
+        </div>
+
         <div class="hline"></div>
-        <marquee><h1>Website under construction</h1></marquee>
+
+        <div class="content">
+            <div class="caption">
+                <h2>GEMINI Contributions</h2>
+                <p>
+                    A proud moment for me was my first pull request to GEMINI's source code. One of the problems I address in my
+                    research is the effect that the energy characteristics of the precipiating electrons have on the auroral arc
+                    system, which cause the auroral light that we know and love. I incorporated more versatile methods of defining
+                    these characteristics using the empirical model introduced by
+                    <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2010GL045406" target="_blank">Fang et al. (2010)</a>.
+                    <br><br>
+                    In this context, there are two things to consider when looking at the electrons raining down into our atmosphere:
+                    1) how many there are, also known as their <em>total precipitating energy flux</em>, and 2) what energy do they
+                    have? The latter consideration is outlined by what is known as the <em>differential number flux</em>.
+                    <br><br>
+                    This number flux has thusfar been defined using a form of the Maxwell-Boltzmann distribution which is
+                    characterized by a single energy. Unfortunately, this energy is both what defines the average energy of the
+                    electrons raining down, but it is also, through some definition, it defines the temperature of them at their
+                    source region in outer space.
+                    <br><br>
+                    There is no physical reason for these two energies to be the same, which is why I developed code that allows for
+                    a user-defined differential number flux when running GEMINI simulations.
+                </p>
+            </div>
+            <a href="images/gemini-code.png" target="_blank" class="img">
+                <img id="gemini" src="images/gemini-code.png" title="gemini">
+            </a>
+        </div>
+
+        <div class="hline"></div>
+
+        <div class="content">
+            <div class="caption">
+                <h2>Aurora GEMINI</h2>
+                <p>
+                    GEMINI is a FORTRAN 90 code which has a MATLAB wrapper to handle basic input and output commands surrounding
+                    simulations. I developed a secondary wrapper surrounding all that called
+                    <a href="https://github.com/317Lab/aurora_gemini" target="_blank">Aurora GEMINI</a>. It handles interfacing
+                    GEMINI with auroral systems in mind.
+                    <br><br>
+                    This toolset is seamlessly integrated into the GEMINI MATLAB wrapper. Some of its main functionalities include
+                    the implementation of the reconstruction and replication techniques, as well as current flux tube generation and
+                    visualization outlined in van Irsel et al.
+                    (<a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024JA032722" target="_blank">2024</a>, 
+                    <a href="coming-soon.html">2025</a>). The replication technique allows for the extrapolation of 1D tracked data,
+                    such as that from spacecraft, by using maximal information provided by auroral images. This is required to be
+                    able to use these data for the driving of GEMINI simulations.
+                    <br><br>
+                    Current flux tubes are an invention of mine that provide much improved visualization of current closure through
+                    the atmosphere. They are analogous to magnetic flux tubes in that they simply conserve electric current
+                    throughout them and utilize their divergence-free conditions. They represent invisible electric wires that are
+                    several square kilometers in cross-section, with kiloamps of current passing through them.
+                    <br><br>
+                    Additionally, this toolset allows for:
+                    <ol>
+                        <li>- Interfacing with The GLobal airglOW Model (<a href="https://www2.hao.ucar.edu/modeling/glow" target="_blank">GLOW</a>)</li>
+                        <li>- Grid plotting over the Northern auroral oval (shown here)</li>
+                        <li>- Generating PBS and/or SLURM scripts for use in cluster computing</li>
+                        <li>- Generating, setup, and running of simulation initial condition runs</li>
+                        <li>- Providing ionization rate altitude profiles using methods by Fang et al.
+                            (<a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2008JA013384" target="_blank">2008</a>,
+                            <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2010GL045406" target="_blank">2010</a>)
+                        <li>- Many other useful tools and functions.</li>
+                    </ol>
+                    This toolset developed out of my thesis GitHub
+                    <a href="https://github.com/julesvanirsel/thesis" target="_blank">repository</a>, and grew into something well
+                    worth sharing with the scientific community. It is a key outcome of my Ph.D. research.
+                </p>
+            </div>
+            <a href="images/aurora-gemini.png" target="_blank" class="img">
+                <img id="gemini" src="images/aurora-gemini.png" title="gemini">
+            </a>
+        </div>
+
         <div class="hline"></div>
 
     </div>
