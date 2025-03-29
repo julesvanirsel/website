@@ -282,7 +282,7 @@ a.img::after {
     /* background-image: url("../../images/header.jpg"); */
     /* background-position: center; */
     /* background-size: cover; */
-    background-color: var(--green1);
+    background-color: var(--green2);
     color: var(--white3);
     display: flex;
     justify-content: center;
@@ -408,7 +408,7 @@ a.img::after {
     width: 1.28em;
     left: 0.16em;
     bottom: 0.16em;
-    background-color: var(--green1);
+    background-color: var(--green2);
     transition: .4s;
 }
 
@@ -457,6 +457,15 @@ input:checked+.slider:before {
 
 .textbook h2 {
     padding-bottom: 0.8em
+}
+
+/* presentation */
+.presentation p {
+    padding: 0 0 0.5em 0.5em;
+}
+
+.presentation h2 {
+    margin: 0;
 }
 
 /* video */
