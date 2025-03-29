@@ -84,9 +84,6 @@
         
         <!-- content -->
         <div class="content">
-            <!-- <a href="images/mpi.png" target="_blank" class="img">
-                <img id="gemini" src="images/mpi-small.png" title="gemini">
-            </a> -->
             <div class="video-content">
                 <iframe
                     src="https://www.youtube.com/embed/mgUZwoR0gcE?&amp;controls=0&autoplay=1&loop=1&playlist=mgUZwoR0gcE"
@@ -104,19 +101,19 @@
                     begging the question: "where do these currents come from?" This video, created by the Conceptual Image Lab at
                     NASA's Goddard Space Flight Center, goes a long way in explaining it.
                     <br><br>
-                    The Sun is constantly expelling ionized gas, or plasma, in all directions.
-                    Some of this plasma hits Earth which, if it wasn't for our own terrestial
-                    magnetic field, would strip away our atmosphere, just as it did with Mars. Our magnetic field acts as a shield to this solar wind; a shield which sometimes
-                    breaks. We call this breaking <em>magnetic reconnection</em>.
+                    The Sun is constantly expelling ionized gas, or plasma, in all directions. Some of this plasma hits Earth which,
+                    if it wasn't for our own terrestrial magnetic field, would strip away our atmosphere, just as it did with Mars.
+                    Luckily, our magnetic field acts as a shield to this solar wind; a shield which sometimes breaks. We call this
+                    breaking <em>magnetic reconnection</em>.
                     <br><br>
-                    When this happens, the Earth's magnetic field attaches itself to the solar wind which pulls it back towards
-                    the nightside. There, the magnetic field lines, which can be thought of as a elastic bands, pile up in
-                    what is called the magnetotail. However, only so many field lines can squeeze together before they too, just like on
-                    the day side, break.
+                    When this happens, the Earth's magnetic field attaches itself to the solar wind which pulls it back towards the
+                    nightside. There, the magnetic field lines, which can be thought of as elastic bands, pile up in what is called
+                    the magnetotail. But only so many field lines can squeeze together before they too, just like on the dayside,
+                    break and reconnect.
                     <br><br>
-                    Then, since the field lines are under a lot of tension, they snap towards the Earth taking with them a
-                    whole bunch of plasma, plasma which contains many charged particles flying along the field lines. This is known as 
-                    field-aligned electric current.
+                    Immediately after this nightside reconnection occurs, since the field lines are under a good amount of tension,
+                    they snap towards the Earth carrying with them plenty of plasma. This plasma contains charged particles flying
+                    past each other along the field lines, substantiating what is known as field-aligned electric current.
                 </p>
             </div>
         </div>
@@ -125,28 +122,99 @@
 
         <div class="content">
             <div class="caption">
-                <h2>The Dungey Cycle & the Birkeland Currents</h2>
+                <h2>The Dungey Cycle</h2>
                 <p>
-                    The above process happens cyclically. Here is a <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2009JA014979" target="_blank">Le et al.</a> (2010)
+                    The above process is part of the <em>Dungey Cycle</em>, named after James Dungey for his 1961
+                    <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.6.47" target="_blank">paper</a>. From the
+                    nightside reconnection on, the cycle continues whereupon these newly formed field lines accumulate around local
+                    midnight. But, like in the magnetotail, the field lines prefer not to bunch up; they push away from each other
+                    towards the dawn and dusk sides, ultimately replenishing the dayside magnetic field, where the cycle repeats.
+                    <br><br>
+                    Margaret Kivelson and Christopher Russell, in chapter 9 of their 1995
+                    <a href="https://ui.adsabs.harvard.edu/abs/1995isp..book.....K/abstract" target="_blank">textbook</a>, provide
+                    an excellent illustration, shown here, summarizing the Dungey cycle. They also illustrate how these
+                    magnetospheric dynamics map to flows on the Earth's polar cap. Following along: (1) the dayside reconnection,
+                    (2-5) the draping of the broken field lines to the magnetotail, (6) the nightside reconnection, (7-8) the
+                    field lines snapping towards Earth while simultaneously lowering in latitude, and (9) the dayside replenishment.
+                    <br><br>
+                    On the Earth's polar caps, this looks like two symmetric D-shaped convection flow patterns. Plasma flows from
+                    noon to midnight across the polar cap where it splits towards dawn and dusk and flows towards lower latitudes,
+                    ultimately coming back around to the dayside.
+                </p>
+            </div>
+            <a href="images/dungey-cycle.png" target="_blank" class="img">
+                <img id="dungey-cycle" src="images/dungey-cycle.png" title="dungey-cycle">
+            </a>
+        </div>
+
+        <div class="hline"></div>
+
+        <div class="content">
+            <div class="caption">
+                <h2>Field-Aligned Current Closure</h2>
+                <p>
+                    We care about these plasma flows because, as plasma moves forward in the northern polar cap, it
+                    carries an electric field with it directed to its right; an electric field along which currents can flow. We
+                    call these Pedersen currents, shown here in a figure by Le et al. from their 2009
+                    <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2009JA014979" target="_blank">paper</a>,
+                    showing how the Pedersen currents can connect the field-aligned currents to each other.
+                    <br><br>
+                    These electric fields, however, are not enough to sustain Pedersen currents. Collisions between our neutral
+                    atmosphere and the charged particles subsiding in the plasmas permit these currents to flow perpendicular to the
+                    Earth's magnetic field lines. This is why our atmosphere is such a crucial part of this system.
+                    <br><br>
+                    Now, these same collisions also give rise to a second type of current called the Hall current which, perhaps
+                    counterintuitively, runs opposite the flow of plasma. It also exists at a lower altitude than the Pedersen
+                    currents and seemingly, according to this figure, are completely disconnected from the field-aligned currents.
+                    <br><br>
+                    My research challenges this ideal perspective of atmospheric current closure and looks at how the aurora, or
+                    Northern or Southern lights, can impact this picture using 3D atmospheric plasma modeling.
                 </p>
             </div>
             <a href="images/birkeland-currents.png" target="_blank" class="img">
-                <img id="gemini" src="images/birkeland-currents.png" title="gemini">
+                <img src="images/birkeland-currents.png" title="birkeland-currents">
             </a>
         </div>
 
         <div class="hline"></div>
 
         <div class="content">
-            <div class="caption">
-                <h2>Complex</h2>
+            <a href="images/complex-aurora.png" target="_blank" class="img">
+                <img id="complex-aurora" src="images/complex-aurora.png" title="complex-aurora">
+            </a>
+            <div class="caption-right">
+                <h2>Auroral Current Closure</h2>
                 <p>
-                    GEMINI is a FORTRAN 90 code which has a MATLAB wrapper to handle basic input and output commands surrounding
+                    The aurorae are more than just a stunning sight in the night sky; they are at the visible end of a complex
+                    system affecting the aforementioned currents. The charged particles that rain down into the atmosphere
+                    alongside the field-aligned currents can alter the plasma density and thus the collisionality. This, in turn,
+                    impacts the efficiency of the Pedersen and Hall currents, creating a complicated, non-linear, yet
+                    self-consistent system.
+                    <br><br>
+                    To illustrate the complexity of it all, this figure depicts the field-aligned current closure surrounding a
+                    relatively simple set of auroral arcs. Each tube is what I call a current flux tube, in that it carries a single
+                    amperage. Of the three, only the red one partially connects the field-aligned current sheets within this
+                    simulation volume. In contrast to the above perspective, all three tubes connect the field-aligned current to
+                    the Hall current in various ways.
+                    <br><br>
+                    A simulation like this one is made possible through the use of multiple scientific instruments. The map of
+                    field-aligned current this simulation is tasked with closing is plotted at the bottom side of this volume. This 
+                    map is generated from field-aligned current data provided by the European Space Agency's
+                    <a href="https://earth.esa.int/eogateway/missions/swarm" target="_blank">Swarm</a> spacecraft. Furthermore, on
+                    the eastern wall, a central cut of the plasma density resulting from the double-arc system is shown. This is
+                    made possible through the use of multi-colored, all-sky auroral imagery provided by the Poker Flat Digital
+                    All-sky Cameras (<a href="http://optics.gi.alaska.edu/optics/" target="blank">DASC</a>) and additional computer
+                    modeling. The light-blue arrows show the electric field as calculated by
+                    <a href="plasma-modeling.html">GEMINI</a>, but influenced by a global network of radars called
+                    <a href="https://superdarn.ca/" target="_blank">SuperDARN</a>, or by the Poker Flat Incoherent Scatter Radar
+                    (<a href="https://amisr.com/amisr/about/about_pfisr/" target="_blank">PFISR</a>). Simulations such as these are
+                    very much a group effort.
+                    <br><br>
+                    I encourage you have a look at my <a href="coming-soon.html">dissertation</a>, or our
+                    <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024JA032722" target="_blank">2024</a>/<a href="coming-soon.html">2025</a>
+                    papers on this subject!
                 </p>
             </div>
-            <a href="images/gemini.gif" target="_blank" class="img">
-                <img id="gemini" src="images/gemini-small.png" title="gemini">
-            </a>
         </div>
 
         <div class="hline"></div>

@@ -21,6 +21,8 @@ function darkmodeToggle() {
     swap(headers2, 20)
     swap(headers3, 20)
     switchImage('gemini')
+    switchImage('dungey-cycle')
+    switchImage('complex-aurora')
 }
 
 function swap(els, offset) {
@@ -53,6 +55,7 @@ function invert(c, offset) {
 
 function switchImage(id) {
     const el = document.getElementById(id)
+    if (!el || !el.src) return;
     if (el.src.endsWith('-dark.png')) {
         el.src = el.src.replace('-dark.png', '.png')
     } else {
