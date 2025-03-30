@@ -277,6 +277,17 @@ a.img::after {
     padding-left: 0.5em;
 }
 
+.nav-panel>ul>li>ul>li>ul {
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+}
+
+.nav-panel>ul>li>ul>li>ul>li>a {
+    color: var(--gray3);
+    padding-left: 1em;
+}
+
 /* nav bar */
 .nav-bar {
     /* background-image: url("../../images/header.jpg"); */

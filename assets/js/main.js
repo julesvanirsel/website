@@ -58,6 +58,10 @@ function openNavD() {
 function openNavE() {
     openNavItem(document.getElementById('navE'))
 }
+function openNavBB() {
+    document.getElementById('navB').style.maxHeight = '9999px'
+    openNavItem(document.getElementById('navBB'))
+}
 
 // breakpoints
 function checkBreakpoint() {
@@ -111,7 +115,9 @@ function updateNavClass() {
 // dropdowns
 $('.nav-bar ul').dropotron({
     hoverDelay: 0,
-    alignment: 'center'
+    alignment: 'center',
+    offsetX: 3,
+    offsetY: 0
 });
 
 // scroll
