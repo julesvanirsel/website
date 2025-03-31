@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+    <title id="title">Jules van Irsel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="page-margins">
+
+        <!-- navigation -->
+        <nav id="nav" class="nav-panel">
+            <button id="nav-close-btn" onclick=closeNav() type="button" title="closeNav"></button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="documents/cv.pdf" target="_">CV</a></li>
+                <li><a href="javascript:void(0)" onclick=openNavA()>Research</a>
+                    <ul id="navA">
+                        <li><a href="auroral-science.html">Auroral System Science</a></li>
+                        <li><a href="plasma-modeling.html">Ionospheric Plasma Modeling</a></li>
+                        <li><a href="conferences.html">Meetings & Conferences</a></li>
+                    </ul>
+                </li>
+                <li class="current"><a href="javascript:void(0)" onclick=openNavB()>Rocket Science</a>
+                    <ul id="navB">
+                        <li><a href="javascript:void(0)" onclick=openNavBB()>Participated Missions</a>
+                            <ul id="navBB">
+                                <li><a href="https://sites.dartmouth.edu/lynch-rocket-lab/rockets/gneiss/#:~:text=The%20Geophysical%20Non-Equilibrium%20Ionospheric%20System%20Science%20%28GNEISS%29%20rockets%2C,imagery%2C%20to%20the%20study%20of%20non-idealized%2C%20non-sheetlike%20nightsi" target="_">GNEISS</a></li>
+                                <li><a href="https://science.nasa.gov/solar-system/skywatching/nasa-to-launch-sounding-rockets-into-moons-shadow-during-solar-eclipse/" target="_">APEP-2</a></li>
+                                <li><a href="https://www.nasa.gov/missions/sounding-rockets/nasa-rocket-team-to-chase-pulsating-aurora/" target="_">LAMP</a></li>
+                                <li><a href="https://www.nasa.gov/missions/sounding-rockets/science-at-the-cusp-nasa-rocket-to-study-mysterious-area-above-the-north-pole/" target="_">C-REX-2</a></li>
+                                <li><a href="https://www.nasa.gov/missions/sounding-rockets/nasa-wallops-may-rocket-launch-exploring-energy-transport-in-space/" target="_">KiNET-X</a></li>
+                                <li><a href="https://www.nasa.gov/missions/sounding-rockets/visions-2-provides-a-look-at-earths-escaping-atmosphere/" target="_">VISIONS-2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="data-parsing.html">Data Parsing</a></li>
+                        <li><a href="vacuum-testing.html">Vacuum Testing</a></li>
+                        <li><a href="fieldwork.html">Fieldwork</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0)" onclick=openNavC()>Proposals</a>
+                    <ul id="navC">
+                        <li><a href="documents/finesst-proposal.pdf" target="_">FINESST (NASA Grad. Funding)</a></li>
+                        <li><a href="https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={10514572-CA34-A48D-7887-425E5A561AD2}&path=open" target="_">GNEISS (NASA HLCAS)</a></li>
+                        <li><a href="https://nspires.nasaprs.com/external/solicitations/summary!init.do?solId={CE94D9F1-858E-F22E-513F-8DF6F389B4AF}&path=open" target="_">ARCS (NASA MIDEX)</a></li>
+                        <li><a href="documents/thesis-proposal.pdf" target="_">Thesis Proposal</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0)" onclick=openNavD()>Education</a>
+                    <ul id="navD">
+                        <li><a href="grad-courses.html">Physics Ph.D.</a></li>
+                        <li><a href="coming-soon.html">Astrophysics B.Sc.</a></li>
+                        <li><a href="coming-soon.html">Mech. Engineering Diploma</a></li>
+                        <li><a href="coming-soon.html">Other Courses</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0)" onclick=openNavE()>Publications</a>
+                    <ul id="navE">
+                        <li><a href="coming-soon.html">van Irsel, et al. (2025), <em>JGR</em></a></li>
+                        <li><a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024JA032722" target="_">van Irsel, et al. (2024), <em>JGR</em></a></li>
+                        <li><a href="https://ntrs.nasa.gov/api/citations/20240008784/downloads/Section%20D.pdf" target="_">Lynch, et al. (2024), <em>JGR</em></a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0)" onclick=scrollToForm()>Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- dark mode -->
+        <div id="dark">
+            <label class="switch">
+                <input id="darkmode" type="checkbox" title="Dark mode">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <div class="hline"></div>
+
+        <div class="section-title"><p>Plasma Vacuum Testing</p></div>
+
+        <div class="hline"></div>
+        
+        <!-- content -->
+        <div class="content">
+            <a href="images/vacuum-chamber-plasma.jpg" target="_" class="img">
+                <img src="images/vacuum-chamber-plasma.jpg" title="vacuum-chamber-plasma">
+            </a>
+            <div class="caption-right">
+                <h2>Generating Plasma</h2>
+                <p>
+                    Text
+                </p>
+            </div>
+        </div>
+        
+        <div class="hline"></div>
+
+        <div class="content">
+            <div class="caption">
+                <h2>Cryogenic Vacuum System</h2>
+                <p>
+                    Text
+                </p>
+            </div>
+            <a href="images/vacuum-chamber.jpg" target="_" class="img">
+                <img src="images/vacuum-chamber.jpg" title="vacuum-chamber">
+            </a>
+        </div>
+        
+        <div class="hline"></div>
+
+        <div class="content">
+            <div class="caption">
+                <h2>Title</h2>
+                <p>
+                    Text
+                </p>
+            </div>
+            <a href="images/vacuum-testing.jpg" target="_" class="img">
+                <img src="images/vacuum-testing.jpg" title="vacuum-testing">
+            </a>
+        </div>
+        
+        <div class="hline"></div>
+
+    </div>
+
+    <!-- footer -->
+    <div class="footer-margins">
+        <div class="footer" id="footer">
+            <div id="form">
+                <h4>Get in Touch</h4>
+                <form action="https://formspree.io/f/xrgnerza" method="post">
+                    <input type="text" name="name" id="name" placeholder="Name" autocomplete="off" />
+                    <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" />
+                    <textarea name="message" id="message" placeholder="Message" rows="5" autocomplete="off"></textarea>
+                    <input type="submit" class="button" value="Send Message" />
+                </form>
+            </div>
+
+            <div id="links">
+                <div>
+                    <h5>Transcripts</h5>
+                    <ul>
+                        <li><a href="documents/transcript-dartmouth.pdf" target="_">Dartmouth College</a></li>
+                        <li><a href="documents/transcript-uofc.pdf" target="_">University of Calgary</a></li>
+                        <li><a href="documents/transcript-sait.pdf" target="_">SAIT Polytechnic</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5>Selected Publications</h5>
+                    <ul>
+                        <li><a href="coming-soon.html" target="_">van Irsel et al. (2025), <em>JGR</em></a></li>
+                        <li><a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024JA032722" target="_">van Irsel et al. (2024), <em>JGR</em></a></li>
+                        <li><a href="https://ntrs.nasa.gov/api/citations/20240008784/downloads/Section%20D.pdf" target="_">Lynch et al. (2024), <em>JGR</em></a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5>Documents</h5>
+                    <ul>
+                        <li><a href="documents/cv.pdf" target="_">Curriculum Vitae</a></li>
+                        <li><a href="coming-soon.html" target="_">Dissertation</a></li>
+                        <li><a href="documents/thesis-proposal.pdf" target="_">Thesis Proposal</a></li>
+                        <li><a href="documents/finesst-proposal.pdf" target="_">NASA FINESST Proposal</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5>In the news</h5>
+                    <ul>
+                        <li><a href="https://www.bostonglobe.com/2023/10/13/metro/darmouth-professor-kristina-lynch-rockets-eclipse-nasa/" target="_">Rockets Studying the Eclipse</a></li>
+                        <li><a href="https://www.astech.ca/archives/indexofpastwinners/space-physics-group-university-of-calgary" target="_">2018 ASTech Special Award</a></li>
+                        <li><a href="https://home.dartmouth.edu/news/2020/09/dartmouth-proposal-chosen-possible-space-mission" target="_">ARCS Proposal</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=QiX9xL_YhvM" target="_">Surveying the Northern Lights</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- icons -->
+        <div class="icons">
+            <a href="https://github.com/julesvanirsel" target="_"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jules-van-irsel-a3413695" target="_"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/juicevanirsel" target="_"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <!-- copyright -->
+        <div class="copyright" id="copyright">
+            © 2025 Jules van Irsel
+        </div>
+
+    </div>
+
+</body>
+
+<!-- scripts -->
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/darkmode.js"></script>
+
+</html>

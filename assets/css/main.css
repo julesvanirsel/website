@@ -607,7 +607,7 @@ input:checked+.slider:before {
     height: 0.2em;
     width: 100%;
     background-color: var(--gray1);
-    margin: 3em 0 3em 0;
+    margin: 4em 0 4em 0;
     opacity: 50%;
 }
 
