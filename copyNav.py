@@ -34,8 +34,9 @@ def select_current(nav, page):
     for line in nav:
         if '<li' in line and '</li' not in line:
             depth += 1
-            last_id = id
-            last_line = line
+            if depth < 2:
+                last_id = id
+                last_line = line
         elif '</li' in line and '<li' not in line:
             depth -= 1
         
@@ -49,6 +50,7 @@ def select_current(nav, page):
         elif 'class="current' in line:
             nav[id] = line.replace(' class="current"', '')
         
+        # print(str(depth)+line[:40])
         id += 1
     return nav
 

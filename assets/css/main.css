@@ -193,7 +193,7 @@ a.img::after {
 #title-bar button::before {
     content: '\2261\2261';
     font-size: 2.8em;
-    left: 0.1em;
+    left: 0.2em;
     top: 0em;
     letter-spacing: -0.5em;
     line-height: 1em;

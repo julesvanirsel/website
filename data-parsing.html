@@ -20,14 +20,14 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="documents/cv.pdf" target="_">CV</a></li>
-                <li class="current"><a href="javascript:void(0)" onclick=openNavA()>Research</a>
+                <li><a href="javascript:void(0)" onclick=openNavA()>Research</a>
                     <ul id="navA">
                         <li><a href="auroral-science.html">Auroral System Science</a></li>
                         <li><a href="plasma-modeling.html">Ionospheric Plasma Modeling</a></li>
                         <li><a href="conferences.html">Meetings & Conferences</a></li>
                     </ul>
                 </li>
-                <li><a href="javascript:void(0)" onclick=openNavB()>Rocket Science</a>
+                <li class="current"><a href="javascript:void(0)" onclick=openNavB()>Rocket Science</a>
                     <ul id="navB">
                         <li><a href="javascript:void(0)" onclick=openNavBB()>Participated Missions</a>
                             <ul id="navBB">
@@ -78,75 +78,74 @@
                 <span class="slider round"></span>
             </label>
         </div>
+
+        <div class="hline"></div>
+
+        <div class="section-title"><p>Instrument Data Parsing</p></div>
+
+        <div class="hline"></div>
+        
+        <!-- content -->
+        <div class="content">
+            <a href="images/realtime-data.png" target="_" class="img">
+                <img id="realtime-data" src="images/realtime-data.png" title="realtime-data">
+            </a>
+            <div class="caption-right">
+                <h2>Realtime Data Parsing</h2>
+                <p>
+                    Rocket instruments demand constant, real-time monitoring to assess hardware health and nominal behavior. This is
+                    especially important when the rocket is on the rail, 60 seconds from launch, awaiting a go/no-go status check.
+                    For this reason, the code or software that parses instrument data streams is a crucial component of rocket
+                    instrument design.
+                    <br><br>
+                    I contributed to the development of such monitoring software for the rocket Mini Plasma Imager
+                    (<a href="https://ucalgary.ca/news/scientists-mini-instruments-help-measure-weather-space" target="_">rMPI</a>)
+                    and overhauled the parsing code for the Petite Ion Probes
+                    (<a href="https://pubs.aip.org/aip/rsi/article/91/9/094503/908508/Auroral-ionospheric-plasma-flow-extraction-using" target="_">PIP</a>),
+                    transitioning it to Python 3 to take advantage of its significantly improved binary data handling. A time
+                    step of the real-time plotting is shown here.
+                    <br><br>
+                    The PIPs communicate using the RS-422 protocol with asynchronous data streams. This necessitates the use of
+                    sentinel values to indicate the start of a specific message. The PIP data can include up to four messages per 
+                    data point.
+                </p>
+            </div>
+        </div>
         
         <div class="hline"></div>
 
-        <div class="section-title"><p>Selected Meetings & Conference Presentations</p></div>
-
-        <div class="hline"></div>
-
-        <!-- content -->
-        <div class="two-column">
-
-            <div class="presentation">
-                <h2>Chapman Conference</h2>
-                <p>Melbourne, Australia - February 2025</p>
-                <a href="documents/presentations/2025-chapman.pdf" target="_" class="img">
-                    <img id="2025-chapman" src="images/presentations/2025-chapman.png" title="2025-chapman">
-                </a>
+        <div class="content">
+            <div class="caption">
+                <h2>Pass-Through Parsing</h2>
+                <p>
+                    Sounding rockets collect only a few minutes of data during flight, making it vital to prevent data dropouts or,
+                    worse, parser crashes. To enhance reliability, I divided the parser into two top-level functionalities. This
+                    first script, <a href="documents/code/shield_feed.txt" target="_"><em>shield_feed.py</em></a>, has just two
+                    tasks: read data from the serial port and write it to standard output and a data file. The only event that can
+                    terminate this script is a Keyboard Interrupt, ensuring that, regardless of issues with the parsing and plotting
+                    scripts, the data will not be lost.
+                    <br><br>
+                    The output of this script can be passed through, or <em>piped</em>, into a second script,
+                    <a href="documents/code/shield_realtime.txt" target="_"><em>shield_realtime.py</em></a>, which handles parsing
+                    and plotting. One particularly challenging aspect of this process is synchronization given that the cadence
+                    of the instrument data stream and the speed at which the parsing and plotting happens do not necessarily align.
+                    To address this, the number of bytes parsed per time step adjusts gradually, allowing the parser to function on
+                    different systems with various processing speeds.
+                    <br><br>
+                    The pass-through parser setup has another benefit in that a saved data file can be piped into the real-time
+                    parser script, replaying the data file. Additional scripts I wrote are
+                    <a href="documents/code/shield_plot.txt" target="_"><em>shield_plot.py</em></a>, which parses and plots an
+                    entire data file at once, and
+                    <a href="documents/code/shield_simulator.txt" target="_"><em>shield_simulator.py</em></a>, which simulates the
+                    data stream of an instrument by reading a data file and looping it over a virtual serial port connection.
+                </p>
             </div>
-
-            <div class="hline2"></div>
-
-            <div class="presentation">
-                <h2>AGU Fall Meeting</h2>
-                <p>Washington, DC - December 2024</p>
-                <a href="documents/presentations/2024-agu.pdf" target="_" class="img">
-                    <img id="2024-agu" src="images/presentations/2024-agu.png" title="2024-agu">
-                </a>
-            </div>
-
-            <div class="hline2"></div>
-
-            <div class="presentation">
-                <h2>CEDAR Workshop</h2>
-                <p>San Diego, CA - June 2024</p>
-                <a href="documents/presentations/2024-cedar.pdf" target="_" class="img">
-                    <img id="2024-cedar" src="images/presentations/2024-cedar.png" title="2024-cedar">
-                </a>
-            </div>
-
-            <div class="hline2"></div>
-
-            <div class="presentation">
-                <h2>AGU Fall Meeting</h2>
-                <p>San Fransisco, CA - December 2023</p>
-                <a href="documents/presentations/2023-agu.pdf" target="_" class="img">
-                    <img id="2023-agu" src="images/presentations/2023-agu.png" title="2023-agu">
-                </a>
-            </div>
-
-            <div class="hline2"></div>
-
-            <div class="presentation">
-                <h2>First EZIE Science Workshop</h2>
-                <p>John Hopkins, APL - September 2023</p>
-                <a href="documents/presentations/2023-ezie.pdf" target="_" class="img">
-                    <img id="2023-ezie" src="images/presentations/2023-ezie.png" title="2023-ezie">
-                </a>
-            </div>
-
-            <div class="hline2"></div>
-
-            <div class="presentation">
-                <h2>CEDAR Workshop</h2>
-                <p>San Diego, CA - June 2023</p>
-                <a href="documents/presentations/2023-cedar.pdf" target="_" class="img">
-                    <img id="2023-cedar" src="images/presentations/2023-cedar.png" title="2023-cedar">
-                </a>
-            </div>
-
+            <a href="documents/code/shield_realtime.txt" target="_" class="img">
+                <img src="images/parser-code.png" title="parser-code">
+            </a>
         </div>
+        
+        <div class="hline"></div>
 
     </div>
 
