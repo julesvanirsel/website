@@ -603,6 +603,12 @@ input:checked+.slider:before {
     text-align: center;
 }
 
+.section-subtitle p {
+    font-size: 15pt;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
 .hline, .hline2 {
     height: 0.2em;
     width: 100%;
