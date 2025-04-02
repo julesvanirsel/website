@@ -21,7 +21,7 @@ function openNav() {
 }
 
 function closeNav() {
-    nav.style.left = "-50em";
+    nav.style.left = "-60em";
 }
 
 // document.body.addEventListener('click', function () {
@@ -97,6 +97,20 @@ window.addEventListener('resize', function() {
         console.log('breakpoint switch: ' + bp_old + ' to ' + bp)
     }
 })
+
+window.addEventListener('scroll', function() {
+    let navbar = document.getElementById('nav');
+    let darkmode = document.getElementById('dark')
+    if (bp == 2) {
+        if (window.scrollY > 50) {
+            navbar.style.height = '50px'
+            darkmode.style.top = '4em'
+        } else {
+            navbar.style.height = '100px'
+            darkmode.style.top = '7em'
+        }
+    }
+});
 
 function updateNavClass() {
     console.log('updating nav class')
