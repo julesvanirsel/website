@@ -1,6 +1,6 @@
 var $body = $('body')
 var bp = 0
-const [bp0, bp1] = [700, 1200]
+const [bp0, bp1] = [800, 1200]
 const nav = document.getElementById('nav')
 // const imgs = document.getElementsByClassName('img')
 

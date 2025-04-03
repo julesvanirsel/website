@@ -614,7 +614,7 @@ input:checked+.slider:before {
 }
 
 .section-subtitle p {
-    font-size: 15pt;
+    font-size: x-large;
     text-align: center;
     margin-top: 0.5em;
 }
@@ -636,7 +636,7 @@ input:checked+.slider:before {
 /* break points */
 
 /* tablet */
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 801px) {
     .content {
         grid-template-columns: 1fr 1fr;
     }
@@ -665,15 +665,10 @@ input:checked+.slider:before {
 
     p {
         text-align: justify;
-        font-size: small;
     }
 
     h1 {
         padding-top: 0;
-    }
-
-    h2 {
-        font-size: medium;
     }
 
     .footer #links {
