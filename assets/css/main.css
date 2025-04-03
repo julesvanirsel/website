@@ -68,7 +68,7 @@ h1 {
     font-size: xx-large;
     font-weight: 600;
     line-height: 100%;
-    padding: 0.3em 0 0.3em 0;
+    padding: 0.8em 0 0.3em 0;
 }
 
 h2 {
@@ -724,6 +724,10 @@ input:checked+.slider:before {
 
     input:checked+.slider {
         background-color: var(--gray3);
+    }
+
+    .content {
+        grid-template-columns: 2fr 1fr;
     }
 
     .footer {
