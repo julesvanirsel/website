@@ -484,6 +484,11 @@ input:checked+.slider:before {
     margin: 0;
 }
 
+.presentation a{
+    width: 100%;
+    max-width: 100%;
+}
+
 /* video */
 .video-content {
     position: relative;
@@ -615,7 +620,7 @@ input:checked+.slider:before {
 }
 
 .hline, .hline2 {
-    height: 0.2em;
+    height: 0.15em;
     width: 100%;
     background-color: var(--gray1);
     margin: 4em 0 4em 0;
